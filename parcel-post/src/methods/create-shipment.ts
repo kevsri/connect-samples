@@ -12,10 +12,13 @@ export default async function createShipment(
 
   // STEP 1: Validation
   for (let parcel of shipment.packages) {
-    if (parcel.packaging.id === box.id && parcel.weight.ounces > (150 * 16)) {
+    if (typeof parcel.packaging === 'string') {
+      return;
+    }
+    else if (parcel.packaging.id === box.id && parcel.weight.ounces > (150 * 16)) {
       throw new Error(`${parcel.packaging.name} cannot weigh more than 150 pounds`);
     }
-    else if (parcel.packaging.id === bag.id && parcel.weight.ounces > (45 * 16)) {
+    else if (parcel?.packaging?.id === bag.id && parcel.weight.ounces > (45 * 16)) {
       throw new Error(`${parcel.packaging.name} cannot weigh more than 45 pounds`);
     }
   }
