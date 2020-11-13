@@ -25,20 +25,8 @@ export const internationalEconomy: DeliveryServiceDefinition = {
     DocumentSize.Letter,
     DocumentSize.Inches4x6,
   ],
-  originCountries: [
+  availableCountries: [
     Country.UnitedStates,
-  ],
-  destinationCountries: [
-    Country.UnitedStates,
-    Country.Canada,
-    Country.Mexico,
-    Country.PuertoRico,
-    Country.Australia,
-    Country.NewZealand,
-    Country.UnitedKingdom,
-    Country.Ireland,
-    Country.Germany,
-    Country.France,
   ],
   packaging: [
     ...customerPackaging,

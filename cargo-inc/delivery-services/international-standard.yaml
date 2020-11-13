@@ -15,8 +15,7 @@ labelSizes:
   - A4
   - letter
 
-originCountries: worldwide.yaml
-destinationCountries: worldwide.yaml
+availableCountries: worldwide.yaml
 
 packaging:
   - ../packaging/package.yaml
@@ -26,4 +25,3 @@ deliveryConfirmations:
   - ../delivery-confirmations/signature-required.yaml
   - ../delivery-confirmations/adult-signature.yaml
   - ../delivery-confirmations/recipient-signature.yaml
-
